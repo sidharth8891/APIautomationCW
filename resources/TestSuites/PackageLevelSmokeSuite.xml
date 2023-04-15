@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Automation Session Smoke Suite" parallel="tests" thread-count="2">
+    <test name="Automation Test Get Users">
+        <classes>
+            <class name="userManagement.getUsers"/>
+        </classes>
+    </test>
+    <test name="Automation Test Postman Echo">
+        <classes>
+            <class name="userManagement.getPostmanEcho"/>
+        </classes>
+    </test>
+    <test name="Automation Test Postman">
+        <classes>
+            <class name="userManagement.getErgast"/>
+        </classes>
+    </test>
+</suite>

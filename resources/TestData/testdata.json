@@ -1,0 +1,27 @@
+{
+  "username": "postman",
+  "password": "password",
+  "endpoint": "users?page=2",
+  "languages": [
+    "Java",
+    "JavaFX",
+    "Python"
+  ],
+  "getUsers": [
+    "AI",
+    "ML",
+    "Analytics"
+  ],
+  "getErgst": [
+    1,
+    2,
+    3
+  ],
+  "getPostmanEcho": [
+    "e-mail: sidharth.shukla19@gmail.com",
+    "phone: 9848022338",
+    "city: Vancouver",
+    "Area: Surrey",
+    "State: BC"
+  ]
+}
