@@ -58,7 +58,7 @@ public class getUsers extends BaseTest {
                 .body("userId", equalTo(1));
     }
 
-    @Test(description = "validateResponseHasItems" )
+    @Test(description = "validateResponseHasItems test" )
     public void validateResponseHasItems() {
         // Set base URI for the API
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
