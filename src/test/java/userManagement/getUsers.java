@@ -41,7 +41,7 @@ public class getUsers extends BaseTest {
                 statusCode(200);
     }
 
-    @Test (description = "validateGetResponseBody changes")
+    @Test()
     public void validateGetResponseBody() {
         // Set base URI for the API
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
@@ -58,7 +58,7 @@ public class getUsers extends BaseTest {
                 .body("userId", equalTo(1));
     }
 
-    @Test
+    @Test(description = "validateResponseHasItems" )
     public void validateResponseHasItems() {
         // Set base URI for the API
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
