@@ -226,7 +226,7 @@ public class postUsers {
         System.out.println(response.getBody().asString());
     }
 
-    @Test(description = "Validate the response with POJO")
+    @Test(description = "Validate the POST method response with POJO")
     public void validatePostWithResponsePojoListObject() {
 
         String name = "bangalore";
