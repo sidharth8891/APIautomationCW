@@ -41,7 +41,7 @@ public class getUsers extends BaseTest {
                 statusCode(200);
     }
 
-    @Test
+    @Test (description = "validateGetResponseBody changes")
     public void validateGetResponseBody() {
         // Set base URI for the API
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
