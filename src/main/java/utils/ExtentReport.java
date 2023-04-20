@@ -21,7 +21,7 @@ public class ExtentReport {
 
             extentreport.addSystemInfo("OS", "Mac OS X");
 
-            extentreport.loadConfig(new File(System.getProperty("user.dir") + "resources/extent-config.xml"));
+            extentreport.loadConfig(new File(System.getProperty("user.dir") + "/resources/extent-config.xml"));
 
         }
     }
