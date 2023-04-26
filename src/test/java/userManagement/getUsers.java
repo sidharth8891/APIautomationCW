@@ -3,6 +3,7 @@ package userManagement;
 import core.BaseTest;
 import core.StatusCode;
 import io.restassured.RestAssured;
+import io.restassured.http.Cookie;
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -255,9 +256,12 @@ public class getUsers extends BaseTest {
 
     @Test
     public void testUseCookies() {
+       Cookie cookies = new Cookie.Builder("cookieKey1", "cookieValue1")
+               .setComment("using cookie key")
+                       .build();
+
         given()
-                .cookie("cookieKey1", "cookieValue1")
-                .cookie("cookieKey2", "cookieValue2")
+                .cookie(cookies)
                 .when()
                 .get("https://reqres.in/api/users?page=2")
                 .then()
