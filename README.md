@@ -1,5 +1,5 @@
 # APIautomationCW
-API Project with farmework Developmenr contains all the test automation aloong with exposure to API methods
+API Project with farmework Development contains all the test automation aloong with exposure to API methods
 
 This framework can be executed from local cmd and Jenkins too
 
