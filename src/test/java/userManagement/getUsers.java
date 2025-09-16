@@ -164,6 +164,7 @@ public class getUsers extends BaseTest {
     public void testGetUsersWithMultipleQueryParams() {
         Response response =
                 given()
+                        .header("x-api-key","reqres-free-v1")
                         .queryParam("page", 2)
                         .queryParam("per_page", 3)
                         .queryParam("rtqsdr", 4)
@@ -178,6 +179,7 @@ public class getUsers extends BaseTest {
     @Test
     public void testCreateUserWithFormParam() {
         Response response = given()
+                .header("x-api-key","reqres-free-v1")
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("name", "John Doe")
                 .formParam("job", "Developer")
@@ -197,6 +199,7 @@ public class getUsers extends BaseTest {
     public void testGetUserListWithHeader() {
         given()
                 .header("Content-Type", "application/json")
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get("https://reqres.in/api/users?page=2")
                 .then()
@@ -209,6 +212,7 @@ public class getUsers extends BaseTest {
         given()
                 .header("Authorization", "bearer ywtefdu13tx4fdub1t3ygdxuy3gnx1iuwdheni1u3y4gfuy1t3bx")
                 .header("Content-Type", "application/json")
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get("https://reqres.in/api/users?page=2")
                 .then()
@@ -227,6 +231,7 @@ public class getUsers extends BaseTest {
         // Send a GET request with headers
         given()
                 .headers(headers)
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get("https://reqres.in/api/users?page=2")
                 .then()
@@ -272,6 +277,7 @@ public class getUsers extends BaseTest {
     @Test
     public void testFetchCookies() {
         Response response = given()
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get(URL + "?page=2")
                 .then()
@@ -291,8 +297,9 @@ public class getUsers extends BaseTest {
                 ExtentReport.extentreport.
                         startTest("verifyStatusCodeDelete", "Validate 204 status code for DELETE Method");
         Response resp = given()
+                .header("x-api-key","reqres-free-v1")
                 .delete("https://reqres.in/api/users/2");
-        assertEquals(resp.getStatusCode(), 200);
+        assertEquals(resp.getStatusCode(), 204);
         System.out.println("verifyStatusCodeDelete executed successfully");
     }
 
@@ -306,6 +313,7 @@ public class getUsers extends BaseTest {
         Response resp =
                 given()
                         .queryParam("page", 2)
+                        .header("x-api-key","reqres-free-v1")
                         .when()
                         .get(serverAddress);
         int actualStatusCode = resp.statusCode();  //RestAssured
@@ -321,6 +329,7 @@ public class getUsers extends BaseTest {
         System.out.println("URL  is : " + URL);
         Response resp =
                 given()
+                        .header("x-api-key","reqres-free-v1")
                         .queryParam("page", 2)
                         .when()
                         .get(URL);
@@ -392,6 +401,7 @@ public class getUsers extends BaseTest {
         given()
                 .queryParam("id", id)
                 .queryParam("name", name)
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get("https://reqres.in/api/users")
                 .then()
